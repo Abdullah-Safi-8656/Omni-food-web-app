@@ -1,0 +1,123 @@
+@use "../abstraction" as a;
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 9.6rem;
+  padding: 0 4.8rem;
+  background-color: a.$hero-section-color;
+}
+
+.logo {
+  height: 2.2rem;
+}
+
+.github-icon {
+  height: 3.4rem;
+  width: 3.4rem;
+  color: a.$github-logo-color;
+}
+
+.logo-and-github-icon {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  gap: 2.3rem;
+}
+
+.main-nav {
+  &-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 4.8rem;
+  }
+
+  &-link:link,
+  &-link:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: a.$color-dark-brown;
+    transition: all 0.3s;
+
+    &:hover {
+      color: a.$color-oranged-darked;
+    }
+  }
+
+  &-link:link,
+  &-link:visited {
+    &.nav-cta {
+      background-color: a.$color-primary;
+      color: a.$color-white;
+      padding: 1.2rem 2.4rem;
+      border-radius: 9px;
+
+      &:hover {
+        background-color: a.$color-oranged-darked;
+      }
+    }
+  }
+}
+
+// RESPONSIVE DESIGN
+// Applies at 1200px or below
+@media (max-width: 75em) {
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+}
+
+// Applies at 944px or below
+@media (max-width: 59em) {
+  .main-nav {
+    background-color: a.$main-nav-background-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: all 0.3s ease-in-out;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+
+    // prevents element clicking
+    pointer-events: none;
+
+    // hides an element from a screen reders
+    visibility: hidden;
+  }
+
+
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+}

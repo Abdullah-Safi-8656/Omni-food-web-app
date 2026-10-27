@@ -1,0 +1,94 @@
+@use "../abstraction" as a;
+
+.section-how {
+  padding: 9.6rem 0;
+
+  // subheading and heading secondary is in base folder typography file
+  .step-number {
+    font-size: 8.6rem;
+    color: a.$color-gray-white;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+  }
+
+  .heading-tertiary {
+    font-weight: 700;
+    color: a.$color-black;
+    letter-spacing: -0.5px;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 3.2rem;
+  }
+
+  .step-description {
+    font-size: 1.8rem;
+    line-height: 1.8;
+  }
+  .step-img {
+    width: 35%;
+    transition: transform 0.3s;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.04);
+    }
+
+    &-box {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+      }
+
+      &::before {
+        width: 60%;
+        background-color: a.$hero-section-color;
+        aspect-ratio: 1/1;
+        z-index: -2;
+      }
+
+      &::after {
+        width: 46%;
+        background-color: a.$hero-section-color-dark;
+        aspect-ratio: 1/1;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+// RESPONSIVE DESIGN
+// Applies at 1200px or below
+@media (max-width: 75em) {
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+}
+
+// Applies at 944px or below
+@media (max-width: 59em) {
+  .section-how .step-number {
+    font-size: 7.4rem;
+  }
+}
+
+// Applies at 950px or below
+@media (max-width: 34em) {
+  .step-img {
+    &-box {
+      transform: translateY(2.4rem);
+    }
+    &-box:nth-child(2) {
+      grid-row: 1;
+    }
+    &-box:nth-child(6) {
+      grid-row: 5;
+    }
+  }
+}

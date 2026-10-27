@@ -1,0 +1,45 @@
+@use '../abstraction' as a;
+.margin-right-sm {
+  margin-right: 1.7rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.margin-bottom-sm {
+  margin-bottom: 1.6rem !important;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.grid--center-v {
+  align-items: center;
+}
+
+
+.sticky .header{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 999;
+  width: 100%;
+  box-shadow: 0 1.2rem 3.2rem rgba(a.$color-black, 0.03);
+  background-color: a.$main-nav-background-color;
+  backdrop-filter: blur(3px);
+}
+
+.sticky .hero-section {
+  margin-top: 9.6rem;
+}

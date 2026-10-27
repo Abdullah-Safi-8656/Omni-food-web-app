@@ -1,0 +1,45 @@
+.featured-in {
+  padding: 4.8rem 0 3.2rem 0;
+  &-heading {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.75px;
+    font-weight: 500;
+    margin-bottom: 2.4rem;
+    color: #888;
+  }
+
+  .logos {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.logos img {
+  height: 3.2rem;
+  filter: brightness(0);
+  opacity: 50%;
+  cursor: pointer;
+  &:hover {
+    filter: none;
+    opacity: 100%;
+  }
+}
+
+// RESPONSIVE DESIGN
+// Applies at 944px or below
+@media (max-width: 59em) {
+  .logos img {
+    height: 2.4rem;
+  }
+}
+
+// Applies at 550px or below
+@media (max-width: 34em) {
+  .logos img {
+    height: 1.2rem;
+  }
+}
+
+

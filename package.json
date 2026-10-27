@@ -1,0 +1,15 @@
+{
+  "name": "omni-food-project",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Abdullah safi",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass sass/main.scss css/style.css -w"
+  },
+  "dependencies": {
+    "sass": "^1.105.1"
+  }
+}

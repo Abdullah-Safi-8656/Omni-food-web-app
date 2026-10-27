@@ -1,0 +1,77 @@
+@use "../abstraction" as a;
+
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid a.$color-gray-white;
+
+  &-logo {
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  .logo-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-links {
+    display: flex;
+    list-style: none;
+    gap: 2.4rem;
+  }
+
+  .social-icons {
+    height: 2.4rem;
+    width: 2.4rem;
+  }
+
+  .copyright {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: a.$color-light-grey-3;
+    margin-top: auto;
+  }
+
+  .contact {
+    font-style: normal;
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+
+  .address {
+    margin-bottom: 2.4rem;
+  }
+
+
+
+  &-heading {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+  }
+
+  &-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  &-link:link,
+  &-link:visited {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: a.$color-light-grey-3;
+    transition: all 0.3s;
+
+    &:hover {
+      color: a.$color-dark-grey;
+    }
+  }
+}
+
+// RESPONSIVE DESIGN
+// Applies at 704px or below
+@media (max-width: 44em) {
+  
+}
