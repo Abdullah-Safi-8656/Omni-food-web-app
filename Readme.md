@@ -4,7 +4,7 @@ A responsive food delivery website built with HTML, CSS, and JavaScript. Omnifoo
 
 ## 🌐 Live Demo
 
-[View Live Website](#)
+[View Live Website](https://omnifood-by-abdullah.netlify.app/)
 
 ## ✨ Features
 
@@ -39,7 +39,7 @@ You need a modern web browser and a code editor such as Visual Studio Code.
 1. Clone this repository:
 
    ```bash
-   git clone YOUR_REPOSITORY_URL
+   git clone https://github.com/Abdullah-Safi-8656/Omni-food-web-app
    ```
 
 2. Navigate to the project directory:
